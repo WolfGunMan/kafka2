@@ -48,6 +48,16 @@ plugins {
   // artifacts - see https://github.com/johnrengelman/shadow/issues/901
   id 'com.github.johnrengelman.shadow' version '8.1.0' apply false
   id 'com.diffplug.spotless' version '6.14.0' apply false // 6.14.1 and newer require Java 11 at compile time, so we can't upgrade until AK 4.0
+  
+  id "org.sonarqube" version "4.4.1.3373"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "WolfGunMan_kafka2"
+    property "sonar.organization", "adrianwanderer"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 ext {
